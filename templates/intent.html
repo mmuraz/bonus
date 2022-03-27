@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block title %}
+Axtarış
+{% endblock title %}
+{% block body %}
+    <h1>İstifadəçi məlumatları</h1>
+    <hr>
+    {% if datam %}
+        {% for data in datam %}
+            <div class="jumbtron">
+                <div class="text-center">
+                    <a href="/{{data.Username}}">
+                        <button class="btn btn-info btn-lg">{{data.Username}} - {{data.Name}} {{data.Surname}}</button>
+                    </a>
+                </div>
+            </div>
+            <hr>
+    
+        {% endfor %}
+
+    {% else %}
+        <h1>Heç bir məlumat yoxdur!</h1>
+    {% endif %}
+{% endblock body %}

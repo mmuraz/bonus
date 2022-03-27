@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block title %}
+Satıcı əlavə etmə
+{% endblock title %}
+{% block body %}
+<div class="text-center">
+    <h1><b>Satıcı yaratma səhifəsi</b></h1>
+    <hr>
+    <div class="jumbotron">
+        <form method="post">
+            {{render_field(form.username)}}
+            {{render_field(form.namesurname)}}
+            <button type="submit" class="btn btn-success">Satıcı yarat</button>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+{% endblock body %}

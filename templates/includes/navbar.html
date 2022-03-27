@@ -1,0 +1,62 @@
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="/">Əsas səhifə</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/recentorder">Son satilanlar</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/about">Haqqinda</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/debts">Borclar</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/salaryies">Maaş</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Əməliyyatlar
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/salarystatus">Maaş Verimi</a>
+              <a class="dropdown-item" href="/telephones">Telefonlar</a>
+              <a class="dropdown-item" href="/returning">Qaytarmalar</a>
+              <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/createsalaryies">İşci yarat</a>
+                <a class="dropdown-item" href="/recentorders">Ümümi satış</a>
+                <a class="dropdown-item" href="/recentdeletes">Silinənlər</a>
+
+              </div>
+          </li>
+
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            {% if session["logging"] %}
+              <form action="/search" method="post">
+                <div class="container h-100">
+                  <div class="d-flex justify-content-center h-100">
+                    <div class="searchbar">
+                      <input class="search_input" type="text" name="keyword" placeholder="Search...">
+                      <button type="submit" class="search_icon"><i class="fas fa-search"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <li class="nav-item active">
+                <a class="nav-link" href="/register">Qeydiyyat et</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="/logout">Çıxış</a>
+              </li>
+            {% else %}
+              <li class="nav-item active">
+                <a class="nav-link" href="/sign">Giriş et</a>
+              </li>
+            {% endif %}
+        </ul>
+      </div>
+    </nav>

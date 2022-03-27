@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block title %}
+Satıcılar
+{% endblock title %}
+{% block body %}
+    <h1><b>Satıcılar</b></h1>
+    <hr>
+    
+    {% for datam in data %}
+        <a href="/salaryies/{{datam.Username}}"><button href="/salary/{{datam.Username}}" class="btn btn-info">{{datam.Username}} - {{datam.NameSurname}}</button></a>
+    
+    {% endfor %}
+
+{% endblock body %}

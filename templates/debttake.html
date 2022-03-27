@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Borc ödəmə səhifəsi
+{% endblock title %}
+{% block body %}
+<div class="text-center">
+    <div class="jumbotron">
+        <h1><b>Müştərinin borcu {{data.Debt}} manat təşkil edir.</b></h1>
+        <hr>
+        <form method="post">
+            {{render_field(form.payment)}}
+            <button type="submit" class="btn btn-danger">Ödə</button>
+        <form>
+    </div>
+</div>
+
+
+
+
+{% endblock body %}

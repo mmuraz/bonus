@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block title %}
+Satış: {{id}}
+{% endblock title %}
+{% block head %}
+<script src="https://cdn.ckeditor.com/4.18.0/standard/ckeditor.js"></script>
+{% endblock head %}
+{% block body %}
+<div class="jumbotron">
+    <div class="text-center">
+        <h1>Müştərinin bonusu: {{bonus_my.Bonus}} manat təşkil edir.</h1>
+        <hr>
+        <h1>Satış səhifəsi</h1>
+        <hr>
+        <form method="post">
+            {{render_field(form.content)}}
+            {{render_field(form.cost)}}
+            {{render_field(form.bonusminus)}}
+            <button type="submit" class="btn btn-success">Satış et</button>
+        </form>
+    </div>
+</div>
+<script>
+    CKEDITOR.replace( 'content' );
+</script>
+{% endblock body %}

@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block title %}
+Telefonlar
+{% endblock title %}
+{% block body %}
+<ul>
+    {% if result %}
+        {% for telephone in data %}
+            <li>{{telephone.Telephone}}</li>
+        
+        {% endfor %}
+
+    {% else %}
+        <h1>Telefon nomresi tapilmadi</h1>
+    {% endif %}
+</ul>
+{% endblock body %}

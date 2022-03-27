@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block title %}
+Satıcı statusu
+{% endblock title %}
+{% block body %}
+<div class="text-center">
+    <h1><b>Ümumi satıcı səhifəsi</b></h1>
+</div> 
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th scope="col">Istifadəçi kodu</th>
+                <th scope="col">Ad Soyad</th>
+                <th scope="col">Maaş</th>
+                <th scope="col">Tərtibat</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for data in data %}
+            <tr>
+                <th scope="row">{{data.Username}}</th>
+                <td>{{data.NameSurname}}</td>
+                <td>{{data.Salary}}</td>
+                <td><a href="/salarystatus/{{data.Username}}"><button type="button" class="btn btn-info">Bax</button></a>
+            </tr>
+        
+        {% endfor %}
+
+{% endblock body %}

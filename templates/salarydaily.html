@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block title %}
+Günlük işci hesabatı
+{% endblock title %}
+
+{% block body %}
+<div class="text-center">
+    <div class="jumbotron">
+        <h1><b>Günlük işci hesabatı</b></h1>
+        <hr>
+        <h1><b>İşcinin adı və soyadı: {{data.NameSurname}}</b></h1>
+        <hr>
+        <form method="post">
+            {{render_field(form.salary)}}
+            <button type="submit" class="btn btn-success">Tərtib et</button>
+        <form>
+    </div>
+</div>
+
+
+
+{% endblock body %}
