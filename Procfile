@@ -1,1 +1,1 @@
-web: gunicorn bonus.py
+web: gunicorn bonus:bonus
